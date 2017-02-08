@@ -13,4 +13,8 @@ public class Libreria {
     public void engadirLibros (){
         libreria.add(new Libro(pedirString(),pedirString(),pedirString(),pedirFloat(),pedirInt()));
     }
+    public void borrarLibro(Libro l,ArrayList<Libro>libreria){
+        int index=libreria.indexOf(l);
+        libreria.remove(index);
+    }
 }
