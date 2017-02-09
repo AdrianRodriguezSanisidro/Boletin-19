@@ -6,6 +6,7 @@ import static Sanisidro.PedirDatos.pedirInt;
 import static Sanisidro.PedirDatos.pedirString;
 import java.util.Collections;
 import java.util.Iterator;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Adry
@@ -36,5 +37,18 @@ public class Libreria {
         for(int i=0;i<libreria.size();i++)
             while(libreria.get(i).getNumUnidades()==0)
                 libreria.remove(i);
+    }
+    public void consultarLibro(){
+        String tituloLibro=JOptionPane.showInputDialog("Titulo para buscar");
+        boolean existe=false;
+        for(int i=0;i<libreria.size();i++){
+            if(libreria.get(i).getTitulo().equals(tituloLibro)){
+                System.out.println("O libro esta disponible");
+                existe=true;
+            }
+            if(existe=false){
+                System.out.println("Non dispoñemos dese libro");
+            }
+        }
     }
 }
