@@ -33,6 +33,8 @@ public class Libreria {
        }
     }
     public void darDeBaixa(){
-        
+        for(int i=0;i<libreria.size();i++)
+            while(libreria.get(i).getNumUnidades()==0)
+                libreria.remove(i);
     }
 }
